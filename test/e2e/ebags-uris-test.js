@@ -21,12 +21,13 @@ function verifyCategory(actualCategory, expectedCategory) {
     expect(actualCategory).toEqual(expectedCategory);
 }
 
-describe("price-finder for Sony Entertainment Network Store URIs", function() {
+describe("price-finder for eBags Store URIs", function() {
 
-    // Video Games
-    describe("testing a Video Game item", function() {
-        // PixelJunk™ Monsters
-        var uri = "https://store.playstation.com/#!/en-us/games/pixeljunk-monsters/cid=UP9000-NPUA80108_00-PJMONSTSFULL0001";
+    // Luggage
+    describe("testing a Luggage item", function() {
+
+        // TLS Mother Lode
+        var uri = "http://www.ebags.com/product/ebags/mother-lode-tls-mini-21-wheeled-duffel/125538?productid=1325216";
 
         it("should respond with a price for findItemPrice()", function(done) {
             priceFinder.findItemPrice(uri, function(err, price) {
@@ -42,8 +43,8 @@ describe("price-finder for Sony Entertainment Network Store URIs", function() {
                 expect(itemDetails).toBeDefined();
 
                 verifyPrice(itemDetails.price);
-                verifyName(itemDetails.name, "PixelJunk™ Monsters");
-                verifyCategory(itemDetails.category, "Video Games");
+                verifyName(itemDetails.name, "TLS Mother Lode Mini 21\" Wheeled Duffel");
+                verifyCategory(itemDetails.category, "Luggage");
 
                 done();
             });
