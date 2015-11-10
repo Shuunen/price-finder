@@ -161,7 +161,7 @@ specific library to only enable a certain module). For example:
 The current supported sites, along with categories supported within each site,
 are listed below.
 
-* Amazon
+* Amazon (support for more than just .com)
     * Digital Music
     * Video Games
     * Mobile Apps
@@ -189,6 +189,8 @@ are listed below.
     * Video Games
 * eBags
     * Luggage
+* Nintendo
+    * Video Games
 
 Don't see your site listed? Please consider [contributing](#contributing) to the project!
 
@@ -234,6 +236,11 @@ To execute the end to end tests run:
 `$ BESTBUY_KEY=<key> npm run test-e2e`
 
 Where `<key>` is the developer API key for Best Buy.
+
+If you would like to run a single end to end test (rather than all of them),
+use the `test-e2e-single` script. For example:
+
+`$ npm run test-e2e-single test/e2e/amazon-uris-test.js`
 
 #### Adding Sites ####
 
